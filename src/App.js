@@ -3,6 +3,7 @@ import HomePage from './pages/Home';
 import ProductsPage from './pages/Products';
 import RootLayout from './pages/root';
 import ErrorPage from './pages/Error';
+import ProductDetailPage from './pages/ProductDetail';
 
 
 
@@ -13,7 +14,8 @@ const appRouter = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { path: '/', element: <HomePage /> },
-      { path: '/products', element: <ProductsPage /> }
+      { path: '/products', element: <ProductsPage /> },
+      { path: '/products/:id', element: <ProductDetailPage /> }
     ]
   }
 ]);
